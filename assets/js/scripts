@@ -1,0 +1,62 @@
+$(document).ready(function () {
+
+
+    $("#status").fadeOut();
+    $("#preloader").fadeOut("slow");
+    $(".cb-slideshow, .material-half-bg, .login-content, .login-box").removeAttr("hidden");
+
+    $("#registerButton").on("click", function () {
+        //window.alert("Hello");
+        swal({
+            title: "Account Created!",
+            text: "An email has been sent to you for verification!",
+            type: "success"
+        }).then(function () {
+            $("#sign_up_form").submit();
+        })
+    })
+
+    $("#changePassword").on("click", function () {
+        //window.alert("Hello");
+        swal({
+            title: "Password has been changed!",
+            text: "You will be Loggeg out. Login again to verify!",
+            type: "success"
+        }).then(function () {
+            $("#change_pass_form").submit();
+        })
+    })
+
+    $("#login_form").bootstrapValidator({
+        feedbackIcons: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            user_email: {
+                validators: {
+                    notEmpty: {
+                        message: 'The Email is required and cannot be empty'
+                    },
+                    regexp: {
+                        regexp: /[a-z]{3}/i,
+                        message: "Please enter perfect Email ID"
+                    },
+                }
+            },
+            user_password: {
+                validators: {
+                    notEmpty: {
+                        message: 'The Password is required and cannot be empty'
+                    },
+                    regexp: {
+                        regexp: /[a-z]{8}/i,
+                        message: "The password must be 8 characters long"
+                    },
+                }
+            },
+        }
+    });
+
+});

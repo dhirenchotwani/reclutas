@@ -1,0 +1,91 @@
+.error-container{
+    color: RED;
+    width: 400px;
+    height: 100px;
+    font-size: 20px;
+    margin-left: -2%;
+}
+
+.has-error input, .has-error input:focus, .has-error input:active{
+    border-color: RED;
+}
+
+/********************************************FOR SLIDER BACKGROUND ********************************/
+.cb-slideshow{
+    list-style: none;
+}
+
+
+/*************************************************LOGIN*********************************************************/
+.login-box{
+    border-radius: 6px;
+}
+
+.register_container a:hover{
+    text-decoration: none;
+}
+
+#preloader{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+#preloader_newsfeed{
+    position: absolute;
+    left: 52%;
+    top: 30%;
+    z-index: 1;
+    width: 20px;
+    height: 20px;
+    margin: -75px 0 0 -75px;
+    border: 8px solid #3f4257;
+    border-radius: 50%;
+    border-top: 8px solid #ff763a;
+    width: 90px;
+    height: 90px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/*************************************************CHANGE PASSWORD*********************************************************/
+
+#change_password_page .login-box{
+    height: 455px;
+}
+
+/***************************************************ABOUT PROFILE************************************************************/
+/**************CSS**********/
+.edit-custom{
+    border-radius:100%;
+    float:right;
+    font-size: 24px;
+    box-sizing: border-box;
+}
+/*Custom*/
+.update-project-modal{
+    width: 770px;
+    padding: 0 20px;
+}
+
